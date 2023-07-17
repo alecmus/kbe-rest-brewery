@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.UUID;
@@ -68,9 +69,12 @@ public class BeerController {
 
         BeerDto savedBeer = beerService.saveNewBeer(beerDto);
 
+        final String baseUrl =
+                ServletUriComponentsBuilder.fromCurrentContextPath().build().toUriString();
+
         return ResponseEntity
                 .created(UriComponentsBuilder
-                        .fromHttpUrl("http://api.springframework.guru/api/v1/beer/" + savedBeer.getId().toString())
+                        .fromHttpUrl(baseUrl + "/api/v1/beer/" + savedBeer.getId().toString())
                         .build().toUri())
                 .build();
     }
