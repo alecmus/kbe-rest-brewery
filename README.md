@@ -11,5 +11,6 @@ These commands are to be run from the root directory of the project.
 
 ``` docker run -p 8080:8080 -d kbe-rest ```
 
-To show the logs in the console while running omit the ```-d``` (detached) flag.
-
+#### Notes
+- To show the logs in the console while running omit the ```-d``` (detached) flag.
+- The -p flag is for publishing all exposed ports to the host interfaces. By specifying ```-p 8080:8080``` we are explicitly mapping the port 8080 within the docker context to the host's port 8080 to allow the application to be accessible via local port 8080 on the host machine.
