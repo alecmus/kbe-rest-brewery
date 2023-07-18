@@ -93,7 +93,9 @@
                                     <descriptorRef>artifact</descriptorRef>
                                 </assembly>
                                 <dockerFile>Dockerfile</dockerFile>
-                                <tags>latest</tags>
+                                <tags>
+                                    <tag>latest</tag>
+                                </tags>
                             </build>
                         </image>
                     </images>
