@@ -11,3 +11,5 @@ These commands are to be run from the root directory of the project.
 
 ``` docker run -p 8080:8080 -d kbe-rest ```
 
+To show the logs in the console while running omit the ```-d``` (detached) flag.
+
