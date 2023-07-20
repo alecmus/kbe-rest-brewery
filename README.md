@@ -13,15 +13,15 @@ Based on [this](https://github.com/springframeworkguru/kbe-rest-brewery) and upd
 
 These commands are to be run from the root directory of the project.
 
-``` docker build  -f ./src/main/dockerBase/Dockerfile -t kbe-rest . ```
+``` docker build  -f ./src/main/dockerBase/Dockerfile -t alecmus/kbe-rest-brewery . ```
 
-``` docker run -p 8080:8080 -d kbe-rest ```
+``` docker run -p 8080:8080 -d alecmus/kbe-rest-brewery ```
 
 #### With Layers
 
-``` docker build  -f ./src/main/docker/Dockerfile -t kbe-rest . ```
+``` docker build  -f ./src/main/docker/Dockerfile -t alecmus/kbe-rest-brewery . ```
 
-``` docker run -p 8080:8080 -d kbe-rest ```
+``` docker run -p 8080:8080 -d alecmus/kbe-rest-brewery ```
 
 #### Notes
 - To show the logs in the console while running omit the ```-d``` (detached) flag.
